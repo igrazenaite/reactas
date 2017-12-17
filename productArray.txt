@@ -1,0 +1,71 @@
+var products= [{
+                title: 'Some plant', 
+                imageURL: plant, 
+                description: 'Wonderful plant', 
+                price: '100', 
+                quantity: '5'
+                },
+               {
+                title: 'Some other plant',
+                imageURL: plant,
+                description: 'This one is priceless',
+                price: '99',
+                quantity: '1'
+		},
+               {
+                title: 'One more plant',
+                imageURL: '',
+                description: 'You will not be able to buy it',
+                price: '5',
+                quantity: '2'
+            	},
+               {
+                title: 'Actually it is a Habenaria radiata',
+                imageURL: '',
+                description: 'A terrestrial orchid from Japan',
+                price: '15',
+                quantity: '4'
+            	}]
+
+var lowPriceProducts = products.filter(prod => prod.price < 10);
+console.log("Products with prices less than 10: ", lowPriceProducts);
+
+var totalPrice = products
+	.reduce((sum, prod) => sum + (prod.price * prod.quantity);
+console.log("Total price: ", totalPrice);
+
+class Produktas{
+    constructor(title, imageURL, description, price, quantity){
+	this.title = title;
+	this.imageURL = imageURL;
+	this.description = description;
+	this.price = price;
+	this.quantity = quantity;
+	}	
+	
+    getProductArray(){
+	var newProductsArray = products.map(prod => ????????)
+	return newProductArray;
+	}
+    getProductSet(){
+	var productSet = new Set();
+	for (int i = 0; i<newProductsArray.length; i++){
+	     productSet.add(newProductsArray[i]);	
+		}
+	return productSet;
+	}
+    getProductMap(){
+	var productMap = new Map();
+	for (int i=0; i<productSet.size(); i++){
+	  productMap.add(productSet.get(i));
+	   }
+	return productMap;	
+	}
+    getFinalArray(){
+	var finalProductArray = (Array.from(productMap()))
+		.reduce((products, product) => products + 
+		product.title + ' ' + product.price);	
+	
+	return finalProductArray;	
+	}
+}
