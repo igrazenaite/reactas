@@ -1,14 +1,27 @@
 import React from 'react';
+import axios from 'axios';
 
 class ProductAdministrationComponent extends React.Component{
     constructor(props){
         super(props);
+        console.log(props);
         this.state={
             title : '',
             imageurl: '',
             description: '',
             price: '',
             quantity: ''};
+
+    }
+
+    componentWillMount(){
+        axios.get('localhost:3000/#/admin/products/new')
+        .then((responce)=>{
+            this.setState({products: responce.data})
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
     }
 
     handleSubmit = (event)=> {
@@ -66,5 +79,5 @@ class ProductAdministrationComponent extends React.Component{
         
     }
 
-export var Administration = ProductAdministrationComponent;
+//export var Administration = ProductAdministrationComponent;
 export default ProductAdministrationComponent;

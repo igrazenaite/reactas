@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  goProducts = () => this.props.router.push("products");
+  //goProducts = () => this.props.router.push("products");
 
   render() {
     return (
@@ -16,10 +16,10 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-         <p><button onClick={this.goProducts}
+        {/*  <p><button onClick={this.goProducts}
                     className="btn btn-primary"
                     role="button">
-                    Go to products</button></p> 
+                    Go to products</button></p> */} 
       </div>
     );
   }

@@ -1,5 +1,5 @@
 {
-  "name": "products",
+  "name": "shop-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,7 +7,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^3.2.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "axios": "0.17.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,6 +17,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "homepage": "./",
   "eslintConfig": {
     "extends": "react-app"
   }
